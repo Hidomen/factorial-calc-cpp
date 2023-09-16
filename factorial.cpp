@@ -1,17 +1,15 @@
 #include <iostream>
 
-using namespace std;
-
 int factorial(int number, int input);
 
 int main(){
     int number;
-    cout << "** FACTORIAL CALCULATOR ***" << endl;
-    cout << "NUMBER? : ";
-    cin >> number;
+    std::cout << "** FACTORIAL CALCULATOR ***\n";
+    std::cout << "NUMBER? : ";
+    std::cin >> number;
     int input = number;
     if ( number < 0){
-        cout << "your number must be bigger or equal to zero\n";
+        std::cout << "your number must be bigger or equal to zero\n";
         main();
     } else {
         factorial(number, input);
@@ -26,6 +24,6 @@ int factorial(int number, int input){
         total *= number;
         number--;
     }
-    cout << input << "! = " << total << endl;
+    std::cout << input << "! = " << total << '\n';
     return total;
 }
